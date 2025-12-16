@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<div>
+    <h2>
+        <a href="#home">Home</a> |
+        <a href="#about">About Me</a>
+    </h2>
+</div>
+
+<!-- A. Change Theme Button -->
+<button id="themeBtn">Toggle Dark Mode</button>
+
+<hr>
+
+<!-- 2-Column Layout -->
+<table>
+    <tr>
+
+        <!-- LEFT COLUMN -->
+        <td>
+            <div id="home">
+                <img id="profile-img" src="https://uploads.onecompiler.io/4453g5fkj/4453ftevp/Media.jpg" alt="Profile Image"><br><br>
+                <h2>Dominic Ellajah Y. Zoleta</h2>
+                <span>Web Developer</span>
+
+                <!-- B. Edit Job Title Button -->
+                <br><button id="editJobBtn">Edit Job Title</button>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>Contact</h3>
+                <p>Email: dominiczoleta123@gmail.com</p>
+            </div>
+
+            <hr>
+
+            <!-- C. Skills Section with Toggle -->
+            <button id="toggleSkillsBtn">Hide Skills</button>
+
+            <div id="skillsSection">
+                <h3>Skills</h3>
+                <dl>
+                    <dt>Frontend</dt>
+                    <dd>HTML</dd>
+                    <dd>CSS</dd>
+                    <dd>JavaScript</dd>
+                </dl>
+            </div>
+
+        </td>
+
+        <!-- RIGHT COLUMN -->
+        <td>
+            <div id="about">
+                <h2>About Me</h2>
+                <p>I am a 2nd year IT student in NU Fairview and I like to play online games and draw.</p>
+            </div>
+
+            <hr>
+
+            <div>
+                <h2>Message Me</h2>
+
+                <form onsubmit="return validateForm()">
+                    <p>
+                        Name:<br>
+                        <input type="text" id="nameField">
+                    </p>
+
+                    <p>
+                        Email:<br>
+                        <input type="email" id="emailField">
+                    </p>
+
+                    <!-- D. Message Textarea + Live Counter -->
+                    <p>
+                        Message:<br>
+                        <textarea id="msgBox" maxlength="200"></textarea>
+                        <p>Characters left: <span id="counter">200</span></p>
+                    </p>
+
+                    <p>
+                        <input type="submit" value="Send">
+                    </p>
+                </form>
+            </div>
+        </td>
+
+    </tr>
+</table>
+
+<hr>
+
+<!-- FOOTER + F. Auto Date -->
+<div style="text-align: center;">
+    <strong>WebProg - Web Programming 2025</strong><br>
+    <p id="dateDisplay"></p>
+</div>
+
+</body>
+</html>
+
